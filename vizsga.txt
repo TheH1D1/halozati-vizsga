@@ -1,0 +1,65 @@
+Fő épület:
+VLANOK készen
+router-on-a-stick
+nativa vlan átállítva 320-ra
+csak a 100,200,300,320-as vlanokat engedi át a trunk kapcsolat
+spanning-tree működik
+
+A Switchenek csak a 100,200,300 és a 320-as vlanokat engedjüt át és biztonsági okokból a natív vlant megváltoztatjuk 320-ra
+ 
+
+Main-SW-1:
+Fa0/1-10 - 100VLAN
+FA0/11-15 - 300VLAN
+
+Main-SW-2:
+Fa0/1-6 - 200VLAN
+Fa0/7-14 - 300VLAN
+
+Main-SW-3:
+Fa0/1-8 - 100VLAN
+Fa0/9-12 - 300VLAN
+
+A nem használt portokat a VLAN 240-ben vannak és le vannak kapcsolva.
+
+
+
+-VLAN-ok használata, VLAN-ok közti forgalomirányítás ✔️
+
+-Második rétegbeli redundancia ✔️
+
+-Dinamikus címkiosztás IPv4 környezetben
+    -Fő épület(vlanok) | DHCP Szerver IPv4
+    -Animátorok | DHCP Szerver IPv6
+    -Teszterek | Rouer DHCP pool
+
+-IPv6 címzés és dinamikus címkiosztás IPv6 környezetben
+
+-Harmadik rétegbeli redundancia (az ipk .5-re végződnek) ✔️
+
+-Hálózatbiztonság, kapcsoló biztonságossá tétele ✔️
+    switchport port-security maximum 2 ✔️
+    switchport port-security mac-address sticky ✔️
+
+
+-Vezeték nélküli technológiák
+
+-Forgalomirányítási alapok, statikus forgalomirányítás
+
+-Dinamikus forgalomirányítási ismeretek
+
+-Hozzáférési listák használata
+
+-Statikus és dinamikus címfordítás lehetőségei
+
+-WAN technológiák
+
+-Virtuális magánhálózat (VPN) kialakítása
+
+-Minőségbiztosítási alapok, hálózatfelügyelet megvalósítása
+
+-Hálózattervezés, hibaelhárítás
+
+-Hálózat virtualizáció, hálózat automatizáció
+
+-Komplex hálózat tervezése, kialakítása
