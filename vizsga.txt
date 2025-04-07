@@ -29,9 +29,9 @@ A nem használt portokat a VLAN 240-ben vannak és le vannak kapcsolva.
 -Második rétegbeli redundancia ✔️
 
 -Dinamikus címkiosztás IPv4 környezetben
-    -Fő épület(vlanok) | DHCP Szerver IPv4
+    -Fő épület(vlanok) | DHCP Szerver IPv4 ✔️
     -Animátorok | DHCP Szerver IPv6
-    -Teszterek | Rouer DHCP pool
+    -Teszterek | Rouer DHCP pool (első 5 cím kizárva) ✔️
 
 -IPv6 címzés és dinamikus címkiosztás IPv6 környezetben
 
@@ -44,15 +44,30 @@ A nem használt portokat a VLAN 240-ben vannak és le vannak kapcsolva.
 
 -Vezeték nélküli technológiák
 
--Forgalomirányítási alapok, statikus forgalomirányítás
+-Forgalomirányítási alapok, statikus forgalomirányítás ✔️
+    A határ routereken statikus forgalomirányítás van az ISP felé ✔️
+    A TesztRouteren statikus forgalomirányítás van az ISP felé ✔️
+    Az AnimRouteren statikus forgalomirányítás van az ISP felé ✔️
+    A Farm routeren statikus forgalomirányítás van az ISP felé ✔️
+ 
 
--Dinamikus forgalomirányítási ismeretek
+-Dinamikus forgalomirányítási ismeretek(ospf) ✔️
+    Az összes forgalomirányítón(kivéve a HomeOffice) hirdetjük az összes privát kapcsolatot ✔️
+    Passzíváljuk a belső és az ISP felé vezető hálózatot ✔️
+    Azonosító : 10
+    Területi azonosító: 0
+
 
 -Hozzáférési listák használata
 
 -Statikus és dinamikus címfordítás lehetőségei
+    Statikus címfordítás az isp felé a fő épületben ✔️
+    A TesztRouteren statikus címfordítás van az ISP felé ✔️
+    Az AnimRouteren statikus címfordítás van az ISP felé ✔️
+    A FarmRouter statikus címfordítás van az ISP felé ✔️
+    A HomeOffice routeren statikus címfordítás van az ISP felé
 
--WAN technológiák
+-WAN technológiák ✔️
 
 -Virtuális magánhálózat (VPN) kialakítása
 
@@ -63,3 +78,5 @@ A nem használt portokat a VLAN 240-ben vannak és le vannak kapcsolva.
 -Hálózat virtualizáció, hálózat automatizáció
 
 -Komplex hálózat tervezése, kialakítása
+
+
