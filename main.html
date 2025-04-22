@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Big Boy Game - Innovatív játékfejlesztés</title>
+  <style>
+    /* Alapértelmezett stílusok a body számára */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #141414;
+      color: #EEE;
+      line-height: 1.6;
+    }
+    
+    /* Fejléc, ahol a cég neve jelenik meg */
+    header {
+      background-color: #080808;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 3px solid #FF4C29;
+    }
+    
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    
+    /* Navigációs sáv */
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      background-color: #1f1f1f;
+    }
+    
+    nav ul li {
+      margin: 0 15px;
+    }
+    
+    nav ul li a {
+      display: block;
+      padding: 15px 0;
+      text-decoration: none;
+      color: #EEE;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    
+    nav ul li a:hover {
+      color: #FF4C29;
+    }
+    
+    /* Különböző szekciók */
+    section {
+      padding: 60px 20px;
+    }
+    
+    /* Kezdőlap (intro) szekció */
+    .intro {
+      text-align: center;
+      background-image: url('header-bg.jpg'); /* Cseréld le a saját képedre */
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      color: white;
+    }
+    
+    .intro::after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .intro h2 {
+      position: relative;
+      font-size: 2.5em;
+      margin: 0;
+      padding: 100px 20px;
+    }
+    
+    /* Tartalom középre igazítása */
+    .about, .games, .contact {
+      max-width: 800px;
+      margin: auto;
+    }
+    
+    /* Játékok szekció stílusa */
+    .games .game {
+      margin-bottom: 40px;
+    }
+    
+    .games .game img {
+      max-width: 100%;
+      display: block;
+      border-radius: 8px;
+    }
+    
+    /* Kapcsolat űrlap stílusa */
+    form label {
+      font-weight: bold;
+    }
+    
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 20px 0;
+      border: none;
+      border-radius: 4px;
+    }
+    
+    form button {
+      background-color: #FF4C29;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    
+    form button:hover {
+      background-color: #e03c1d;
+    }
+    
+    /* Lábjegyzet stílusa */
+    footer {
+      background-color: #080808;
+      padding: 20px;
+      text-align: center;
+      border-top: 3px solid #FF4C29;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Big Boy Game</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#intro">Kezdőlap</a></li>
+      <li><a href="#about">Rólunk</a></li>
+      <li><a href="#games">Játékok</a></li>
+      <li><a href="#contact">Kapcsolat</a></li>
+    </ul>
+  </nav>
+  <section id="intro" class="intro">
+    <h2>Innovatív és szórakoztató játékfejlesztés</h2>
+  </section>
+  <section id="about" class="about">
+    <h2>Rólunk</h2>
+    <p>A Big Boy Game egy dinamikus és kreatív játékfejlesztő stúdió, mely elkötelezett a minőségi és egyedi játékélmények létrehozásában. Csapatunk szenvedélye a játékok, és célunk, hogy minden játékos számára felejthetetlen kalandokat nyújtsunk modern technológia és eredeti ötletek segítségével.</p>
+  </section>
+  <section id="games" class="games">
+    <h2>Játékaink</h2>
+    <div class="game">
+      <h3>Projekt A</h3>
+      <img src="game1.jpg" alt="Projekt A játékkép">
+      <p>Projekt A egy izgalmas akció-kaland játék, mely lenyűgöző grafikával és feszültséggel teli játékmenettel kínál felejthetetlen élményt.</p>
+    </div>
+    <div class="game">
+      <h3>Projekt B</h3>
+      <img src="game2.jpg" alt="Projekt B játékkép">
+      <p>Projekt B egy stratégiai kihívásokat tartalmazó játék, ahol a taktika és a kreatív gondolkodás az egyetlen út a győzelemhez.</p>
+    </div>
+  </section>
+  <section id="contact" class="contact">
+    <h2>Kapcsolat</h2>
+    <p>Ha kérdésed van vagy szeretnél együttműködni velünk, írj bátran! Töltsd ki az alábbi űrlapot, és hamarosan felvesszük veled a kapcsolatot.</p>
+    <form action="send_message.php" method="POST">
+      <label for="name">Név:</label><br>
+      <input type="text" id="name" name="name" required><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br>
+      <label for="message">Üzenet:</label><br>
+      <textarea id="message" name="message" rows="5" required></textarea><br>
+      <button type="submit">Küldés</button>
+    </form>
+  </section>
+  <footer>
+    <p>&copy; 2025 Big Boy Game. Minden jog fenntartva.</p>
+  </footer>
+</body>
+</html>
